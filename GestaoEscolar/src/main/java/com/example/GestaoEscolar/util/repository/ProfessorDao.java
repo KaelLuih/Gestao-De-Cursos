@@ -59,7 +59,7 @@ public Professor ListById(int id)throws SQLException{
                  stmt.setInt(1,id);
                  ResultSet rs = stmt.executeQuery();
                  if(rs.next()){
-                     new Professor
+                    return new Professor
                              (rs.getInt("id"),
                                      rs.getString("nome"),
                                      rs.getString("email"),
