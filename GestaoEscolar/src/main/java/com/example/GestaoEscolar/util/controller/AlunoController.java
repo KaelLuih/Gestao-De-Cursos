@@ -1,8 +1,8 @@
 package com.example.GestaoEscolar.util.controller;
 
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoRequisicao;
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoResposta;
-import com.example.GestaoEscolar.util.service.AlunoService;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoRequisicao;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoResposta;
+import com.example.GestaoEscolar.util.application.service.AlunoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;

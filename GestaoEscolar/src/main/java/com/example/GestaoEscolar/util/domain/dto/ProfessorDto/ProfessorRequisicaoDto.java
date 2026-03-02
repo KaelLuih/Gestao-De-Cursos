@@ -1,4 +1,4 @@
-package com.example.GestaoEscolar.util.dto.ProfessorDto;
+package com.example.GestaoEscolar.util.domain.dto.ProfessorDto;
 
 public record ProfessorRequisicaoDto(String nome, String email,String disciplina) {
 }

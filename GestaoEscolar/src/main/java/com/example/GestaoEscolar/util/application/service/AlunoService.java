@@ -1,8 +1,8 @@
-package com.example.GestaoEscolar.util.service;
+package com.example.GestaoEscolar.util.application.service;
 
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoRequisicao;
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoResposta;
-import com.example.GestaoEscolar.util.mapper.AlunoMapper;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoRequisicao;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoResposta;
+import com.example.GestaoEscolar.util.domain.mapper.AlunoMapper;
 import com.example.GestaoEscolar.util.model.Aluno;
 import com.example.GestaoEscolar.util.repository.AlunoDao;
 import org.springframework.stereotype.Service;

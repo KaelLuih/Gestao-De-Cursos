@@ -1,4 +1,4 @@
-package com.example.GestaoEscolar.util.dto.AlunoDto;
+package com.example.GestaoEscolar.util.domain.dto.AlunoDto;
 
 import java.time.LocalDate;
 

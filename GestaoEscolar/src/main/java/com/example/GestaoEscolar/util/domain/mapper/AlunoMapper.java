@@ -1,7 +1,7 @@
-package com.example.GestaoEscolar.util.mapper;
+package com.example.GestaoEscolar.util.domain.mapper;
 
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoRequisicao;
-import com.example.GestaoEscolar.util.dto.AlunoDto.AlunoResposta;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoRequisicao;
+import com.example.GestaoEscolar.util.domain.dto.AlunoDto.AlunoResposta;
 import com.example.GestaoEscolar.util.model.Aluno;
 import org.springframework.stereotype.Component;
 

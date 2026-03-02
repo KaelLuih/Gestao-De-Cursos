@@ -1,8 +1,8 @@
-package com.example.GestaoEscolar.util.service;
+package com.example.GestaoEscolar.util.application.service;
 
-import com.example.GestaoEscolar.util.dto.cursodto.CursoRequisicaoDto;
-import com.example.GestaoEscolar.util.dto.cursodto.CursoRespostaDto;
-import com.example.GestaoEscolar.util.mapper.CursoMapper;
+import com.example.GestaoEscolar.util.domain.dto.cursodto.CursoRequisicaoDto;
+import com.example.GestaoEscolar.util.domain.dto.cursodto.CursoRespostaDto;
+import com.example.GestaoEscolar.util.domain.mapper.CursoMapper;
 import com.example.GestaoEscolar.util.model.Curso;
 import com.example.GestaoEscolar.util.repository.CursoDao;
 import org.springframework.stereotype.Service;
@@ -35,6 +35,18 @@ public class CursoService {
             throw new RuntimeException("Id nao encontrado");
         }
         return mapper.paraResposta(curso);
+    }
+    public CursoRespostaDto Update(CursoRequisicaoDto requisicao, int id)throws SQLException{
+        Curso curso = mapper.ParaEntidade(requisicao) ;
+        dao.Update(curso,id);
+        return mapper.paraResposta(curso);
+    }
+    public void delete(int id)throws SQLException{
+        Curso curso = dao.LIstByID(id);
+        if(curso == null){
+            throw new RuntimeException("Id nãpo encontrado");
+        }
+        dao.Delete(id);
     }
 
 }

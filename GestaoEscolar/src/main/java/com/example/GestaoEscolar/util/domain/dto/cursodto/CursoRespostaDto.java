@@ -1,4 +1,4 @@
-package com.example.GestaoEscolar.util.dto.cursodto;
+package com.example.GestaoEscolar.util.domain.dto.cursodto;
 
 import java.util.List;
 
