@@ -3,6 +3,7 @@ package com.example.GestaoEscolar.util.controller;
 import com.example.GestaoEscolar.util.application.service.CursoService;
 import com.example.GestaoEscolar.util.domain.dto.cursodto.CursoRequisicaoDto;
 import com.example.GestaoEscolar.util.domain.dto.cursodto.CursoRespostaDto;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class CursoController {
     }
 
     @PostMapping
-    public CursoRespostaDto create(@RequestBody CursoRequisicaoDto requisicao){
+    public CursoRespostaDto create(@Valid  @RequestBody CursoRequisicaoDto requisicao){
         try {
            return service.create(requisicao);
         }catch (SQLException e){
@@ -43,7 +44,7 @@ public class CursoController {
         }
     }
     @PutMapping("/{id}")
-    public CursoRespostaDto Update(@PathVariable int id, @RequestBody CursoRequisicaoDto requisicao){
+    public CursoRespostaDto Update(@PathVariable int id, @Valid @RequestBody CursoRequisicaoDto requisicao){
         try{
             return service.Update(requisicao,id);
         }catch (SQLException e){

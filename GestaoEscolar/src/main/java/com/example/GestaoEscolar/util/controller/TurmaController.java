@@ -4,6 +4,7 @@ import com.example.GestaoEscolar.util.application.service.TurmaService;
 import com.example.GestaoEscolar.util.domain.dto.turmadto.TurmaRequisicao;
 import com.example.GestaoEscolar.util.domain.dto.turmadto.TurmaResposta;
 import com.example.GestaoEscolar.util.model.Turma;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/turma")
-public class TurmaController {
+public class  TurmaController {
 
     private final TurmaService service;
     private RuntimeException runtimeException;
@@ -22,7 +23,7 @@ public class TurmaController {
     }
 
     @PostMapping
-    public TurmaResposta create(@RequestBody TurmaRequisicao requisicao) {
+    public TurmaResposta create(@Valid @RequestBody TurmaRequisicao requisicao) {
         try {
             return service.create(requisicao);
         } catch (SQLException e) {
@@ -49,7 +50,7 @@ public class TurmaController {
         }
     }
     @PutMapping("/{id}")
-    public TurmaResposta Update(@RequestBody TurmaRequisicao requisicao, @PathVariable int id){
+    public TurmaResposta Update(@Valid@RequestBody TurmaRequisicao requisicao, @PathVariable int id){
         try {
             return service.Update(requisicao,id);
         }catch (SQLException e){
