@@ -1,10 +1,8 @@
 package com.example.GestaoEscolar.util.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
-public class aula {
+public class Aula {
 
     private int id;
     private int turma_id;
@@ -43,16 +41,16 @@ public class aula {
         this.assunto = assunto;
     }
 
-    public aula() {
+    public Aula() {
     }
 
-    public aula(int turma_id, LocalDateTime data_hora, String assunto) {
+    public Aula(int turma_id, LocalDateTime data_hora, String assunto) {
         this.turma_id = turma_id;
         this.data_hora = data_hora;
         this.assunto = assunto;
     }
 
-    public aula(int id, int turma_id, LocalDateTime data_hora, String assunto) {
+    public Aula(int id, int turma_id, LocalDateTime data_hora, String assunto) {
         this.id = id;
         this.turma_id = turma_id;
         this.data_hora = data_hora;

@@ -61,7 +61,7 @@ public class CursoDao {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                new Curso(rs.getInt("id"),
+                return new Curso(rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("codigo"));
             }
